@@ -86,7 +86,52 @@ async function findOneUser (req, res){
 }
 
 
+/**
+ * Update user
+ */
+async function updateUser (req, res){
+    /**
+     * TASK:
+     * IMPLEMENT THE FUNCTION______________________- 
+     */
+}
 
+/**
+* Delete an existen user by username
+* @param {*} req 
+* @param {*} res 
+*/
+function deleteUserByUsername (req, res){ 
+    /**
+     * TASK:
+     * IMPLEMENT THE FUNCTION______________________- 
+     */
+
+}
+
+/**
+* 
+* @param {*} req 
+* @param {*} res 
+*/
+function deleteAllUsers (req, res){
+    /**
+     * TASK:
+     * IMPLEMENT THE FUNCTION______________________- 
+     */
+}
+
+/**
+* 
+* @param {*} req 
+* @param {*} res 
+*/
+function findAllUsersByCreatedDate (req, res){
+    /**
+     * TASK:
+     * IMPLEMENT THE FUNCTION______________________- 
+     */
+}
 
 
 
@@ -94,3 +139,7 @@ async function findOneUser (req, res){
     exports.findOneUser= findOneUser;
     exports.createUser = createUser;
     exports.findAllUsers= findAllUsers;
+    exports.updateUser = updateUser;
+    exports.deleteUserByUsername = deleteUserByUsername;
+    exports.deleteAllUsers = deleteAllUsers;
+    exports.findAllUsersByCreatedDate = findAllUsersByCreatedDate;
