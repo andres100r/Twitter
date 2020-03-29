@@ -63,5 +63,34 @@ async function createUser (req, res) {
 }
 
 
+/**
+ * consultar usuario por id
+ */
+
+async function findOneUser (req, res){
+    try {
+         //lee el parametro
+        const { idUser } = req.params;//Execute query
+        /*la linea 1 hace lo mismo uqe las lineas 2 y 3
+       1 const {idUser, idPost} = req.params;
+       2 const idUser = req.body.username,
+       3 const idPost = req.body.creation_date
+        */
+       //ejecuta el query
+        const user = await dbManager.User.findOne({ where: { idUser: idUser } });
+        res.json(user);//Send response
+    } catch (e) {
+        console.log(e);// imprime el error en la consola
+        res.status(500).send({ message: "Some error occurred" });// envia un mensaje de error
+    }
+}
+
+
+
+
+
+
+
+    exports.findOneUser= findOneUser;
     exports.createUser = createUser;
     exports.findAllUsers= findAllUsers;
