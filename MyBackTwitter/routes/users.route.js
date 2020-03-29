@@ -10,6 +10,9 @@ router.get('/', function(req, res, next) {
 });
 */
 
-/* GET users listing. */
+/* Crear usuario. */
 router.post('/', userController.createUser);
+
+router.get('/', userController.findAllUsers);
+
 module.exports = router;

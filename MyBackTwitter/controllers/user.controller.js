@@ -39,6 +39,29 @@ async function createUser (req, res) {
     );
     }
 
-    
 
-    exports.createUser = createUser
+
+
+
+
+
+/**
+ * consultar usuarios
+ * @param {*} req
+ * @param {*} res
+ */
+
+
+ async function findAllUsers (req, res){
+    try {
+        const users = await dbManager.User.findAll ();//ejecuta el Query
+        res.json({ data: users });//Send response
+    } catch (e) {
+        console.log(e);// imprime el error en la consola
+        res.status(500).send({ message: "Some error occurred" });// envia un mensaje de error
+    }
+}
+
+
+    exports.createUser = createUser;
+    exports.findAllUsers= findAllUsers;
