@@ -3,8 +3,8 @@ const sequelizeConnection = require('./db.connection');
 
 // import models
 
-const UserModel = require ('../models/user.models');
-const PostModel = require ('../models/post.models');
+const UserModel = require ('../models/user.model');
+const PostModel = require ('../models/post.model');
 
 
 //init
